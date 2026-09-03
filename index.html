@@ -151,9 +151,14 @@
   .mobile-panel .btn{margin-top:26px;}
 
   @media (max-width:960px){
-    .nav-links,.nav-call{display:none;}
+    .nav-links,.nav-call,.nav-cta-group{display:none;}
     .hamburger{display:flex;}
     .mobile-panel{display:flex;}
+  }
+  @media (max-width:420px){
+    .brand{font-size:16px;gap:8px;}
+    .brand-logo{height:32px;}
+    .brand-name span{display:none;}
   }
 
   /* ---------- Hero ---------- */
@@ -192,16 +197,24 @@
     pointer-events:none;
   }
   .hero-badge{
-    position:absolute;left:20px;bottom:20px;background:rgba(11,31,58,0.88);
+    position:absolute;left:20px;right:20px;bottom:20px;background:rgba(11,31,58,0.88);
     color:#fff;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:600;
     display:flex;align-items:center;gap:10px;backdrop-filter:blur(6px);
+    width:fit-content;max-width:calc(100% - 40px);
   }
-  .hero-badge i{color:var(--blue);}
+  .hero-badge i{color:var(--blue);flex-shrink:0;}
+
+  @media (max-width:480px){
+    .hero-badge{font-size:12px;padding:10px 14px;left:14px;right:14px;bottom:14px;white-space:normal;}
+  }
 
   @media (max-width:960px){
     .hero{padding:118px 0 64px;}
     .hero-grid{grid-template-columns:1fr;gap:34px;}
     .hero p.lead{max-width:none;}
+  }
+  @media (max-width:480px){
+    .hero-eyebrow{font-size:11px;letter-spacing:0.08em;padding:7px 14px;line-height:1.5;}
   }
 
   /* ---------- Section headers ---------- */
@@ -294,8 +307,14 @@
   .brand-chip span{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;}
   .brand-chip.brand-chip-note{background:var(--blue-50);border-color:rgba(22,119,255,0.22);}
   .brand-chip.brand-chip-note span{color:var(--blue-600);font-weight:500;font-size:13.5px;}
-  @media (max-width:900px){.brand-logo-grid{grid-template-columns:repeat(3,1fr);}}
-  @media (max-width:600px){.brand-logo-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:900px){
+    .brand-logo-grid{grid-template-columns:repeat(3,1fr);}
+    .brand-chip-note{grid-column:1 / -1;}
+  }
+  @media (max-width:600px){
+    .brand-logo-grid{grid-template-columns:repeat(2,1fr);}
+    .brand-chip-note{grid-column:1 / -1;}
+  }
 
   .products-subhead{margin-bottom:26px;}
   .products-subhead h3{font-size:clamp(20px,2.6vw,26px);font-weight:700;color:var(--navy);}
