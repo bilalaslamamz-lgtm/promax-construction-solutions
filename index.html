@@ -431,7 +431,7 @@
 
   /* ---------- Floating WhatsApp ---------- */
   .float-whatsapp{
-    position:fixed;right:22px;bottom:22px;z-index:950;
+    position:fixed;right:22px;bottom:22px;z-index:9999;
     width:60px;height:60px;border-radius:50%;background:var(--wa-green);
     display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;
     box-shadow:0 14px 30px -10px rgba(37,211,102,0.65);
@@ -440,6 +440,79 @@
   .float-whatsapp:hover{transform:scale(1.07);box-shadow:0 18px 36px -8px rgba(37,211,102,0.75);}
   @media (max-width:560px){
     .float-whatsapp{width:54px;height:54px;font-size:25px;right:16px;bottom:16px;}
+  }
+
+  /* ================= MOBILE OPTIMIZATION PASS (≤600px) ================= */
+  /* Desktop/tablet layout above 600px is untouched. */
+
+  html{overflow-x:hidden;}
+  section[id]{scroll-margin-top:88px;}
+
+  @media (max-width:600px){
+    .container{padding:0 20px;}
+
+    /* CTA buttons: long labels ("Discuss Your Waterproofing Requirement",
+       "Have a Leakage Problem? Talk to ProMax") used white-space:nowrap on
+       desktop, which could force the button wider than a 375–430px viewport.
+       On mobile, let buttons wrap and go full-width for safe, easy-to-tap CTAs. */
+    .btn{
+      white-space:normal;
+      text-align:center;
+      width:100%;
+      padding:14px 20px;
+    }
+
+    .hero{padding-top:104px;}
+    .hero-eyebrow{margin-bottom:18px;}
+    .hero h1{font-size:clamp(26px,7vw,32px);margin-bottom:16px;}
+    .hero p.lead{font-size:15.5px;margin-bottom:26px;}
+    .hero-actions{gap:12px;margin-bottom:26px;}
+    .hero-trust{gap:8px 16px;font-size:12.5px;}
+
+    .section-head{margin-bottom:32px;}
+    .section-pad{padding:52px 0;}
+
+    .intro-copy{margin-bottom:28px;}
+    .trust-item{padding:22px 18px;}
+
+    .about-copy .section-head{margin-bottom:16px;}
+
+    .service-card{padding:24px 20px;}
+
+    .split{padding:56px 0;}
+    .split-copy h2{margin-bottom:14px;}
+    .split-points{margin-bottom:22px;}
+
+    .brand-logo-grid{gap:10px;margin-bottom:40px;}
+    .brand-chip{padding:16px 12px;min-height:64px;}
+    .brand-chip span{font-size:13px;}
+    .products-subhead{margin-bottom:18px;}
+    .products-grid{gap:10px;}
+    .product-chip{padding:14px;}
+
+    .why-card{padding:22px 18px;}
+    .process-step{padding:0;}
+    .problem-card{padding:20px 16px;}
+    .problems-cta{margin-top:28px;}
+
+    .proof-card{padding:30px 20px;}
+
+    .final-cta p{margin-bottom:26px;}
+
+    .contact-card{padding:22px 20px;}
+    .contact-full{flex-direction:column;align-items:stretch;text-align:center;padding:26px 22px;}
+    .contact-full > div:first-child{flex-direction:column;text-align:center;gap:12px;}
+    .contact-full .btn{width:100%;}
+
+    .site-footer{padding:48px 0 24px;}
+    .footer-grid{gap:32px;padding-bottom:32px;}
+    .footer-brand p{max-width:none;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;gap:6px;}
+  }
+
+  @media (max-width:430px){
+    .hero-badge{font-size:11.5px;gap:8px;}
+    .brand-logo-grid{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
