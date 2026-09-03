@@ -116,6 +116,7 @@
     background:linear-gradient(155deg,var(--blue),var(--navy));
     display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;flex-shrink:0;
   }
+  .brand-logo{height:40px;width:auto;flex-shrink:0;object-fit:contain;}
   .brand-name span{color:var(--blue);}
 
   .nav-links{display:flex;align-items:center;gap:34px;}
@@ -278,6 +279,38 @@
     .split.flip .split-inner{direction:ltr;}
   }
 
+  /* ---------- Brands & products ---------- */
+  .brands{background:var(--gray);}
+  .brands-intro{max-width:780px;margin-bottom:44px;}
+  .brands-intro p{font-size:16px;line-height:1.75;color:var(--ink-soft);margin-top:14px;}
+  .brand-logo-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:64px;
+  }
+  .brand-chip{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:22px 18px;display:flex;align-items:center;justify-content:center;text-align:center;
+    min-height:76px;
+  }
+  .brand-chip span{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;}
+  .brand-chip.brand-chip-note{background:var(--blue-50);border-color:rgba(22,119,255,0.22);}
+  .brand-chip.brand-chip-note span{color:var(--blue-600);font-weight:500;font-size:13.5px;}
+  @media (max-width:900px){.brand-logo-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:600px){.brand-logo-grid{grid-template-columns:repeat(2,1fr);}}
+
+  .products-subhead{margin-bottom:26px;}
+  .products-subhead h3{font-size:clamp(20px,2.6vw,26px);font-weight:700;color:var(--navy);}
+  .products-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+  }
+  .product-chip{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);
+    padding:16px 16px;display:flex;align-items:center;gap:10px;
+  }
+  .product-chip i{color:var(--blue);font-size:14px;flex-shrink:0;}
+  .product-chip span{font-size:14px;font-weight:500;color:var(--charcoal);line-height:1.4;}
+  @media (max-width:900px){.products-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.products-grid{grid-template-columns:1fr;}}
+
   /* ---------- Why choose us ---------- */
   .why{background:var(--navy);color:#fff;}
   .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
@@ -397,7 +430,7 @@
 <header class="site-header" id="siteHeader">
   <div class="container nav-row">
     <a href="#home" class="brand" aria-label="ProMax Construction Solutions home">
-      <span class="brand-mark"><i class="fa-solid fa-water" aria-hidden="true"></i></span>
+      <img src="logo.png" alt="ProMax Construction Solutions logo" class="brand-logo">
       <span class="brand-name">ProMax<span> Construction</span></span>
     </a>
 
@@ -724,6 +757,59 @@
   </div>
 </section>
 
+<!-- ================= BRANDS & PRODUCTS ================= -->
+<section class="brands section-pad" id="brands">
+  <div class="container">
+    <div class="section-head reveal brands-intro">
+      <h2>Our Trusted Construction Chemical Brands &amp; Solutions</h2>
+      <p>We Supply &amp; Apply Premium Construction Chemical Solutions from Leading International and Local Brands. ProMax Construction Solutions not only supplies construction chemical materials but also provides professional application services, so every product is installed the way it is meant to perform.</p>
+    </div>
+
+    <div class="brand-logo-grid reveal">
+      <div class="brand-chip"><span>ProMax Construction Solutions</span></div>
+      <div class="brand-chip"><span>Sika Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Fosroc Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Master Builders Solutions (BASF)</span></div>
+      <div class="brand-chip"><span>Mapei Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Dr. Fixit Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Berger Construction Chemicals</span></div>
+      <div class="brand-chip"><span>National Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Ultra Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Fastchem Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Xpert Construction Chemicals</span></div>
+      <div class="brand-chip"><span>Conmix Construction Chemicals</span></div>
+      <div class="brand-chip brand-chip-note"><span>And Other Leading International &amp; Local Construction Chemical Brands</span></div>
+    </div>
+
+    <div class="products-subhead reveal">
+      <h3>Our Construction Chemical Products &amp; Applications</h3>
+    </div>
+    <div class="products-grid reveal">
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Waterproofing Chemicals</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Roof Waterproofing Systems</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Basement Waterproofing</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Water Tank Waterproofing</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>PU Waterproofing Coatings</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>PU Injection Grouting</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Polyurethane Sealants</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Joint Sealants &amp; Expansion Joint Solutions</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Epoxy Flooring Systems</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Epoxy Coatings</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Industrial Floor Coatings</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Concrete Repair Mortars</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Structural Repair Solutions</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Non-Shrink Grouts</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Cementitious Waterproofing</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Concrete Admixtures</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Tile Adhesives &amp; Tile Bond Solutions</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Crack Repair Solutions</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Protective Coatings</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Heat Reflective Coatings</span></div>
+      <div class="product-chip"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Industrial &amp; Commercial Construction Chemical Solutions</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= WHY CHOOSE US ================= -->
 <section class="why section-pad" id="why-us">
   <div class="container">
@@ -940,7 +1026,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#home" class="brand" aria-label="ProMax Construction Solutions home">
-          <span class="brand-mark"><i class="fa-solid fa-water" aria-hidden="true"></i></span>
+          <img src="logo.png" alt="ProMax Construction Solutions logo" class="brand-logo">
           <span>ProMax Construction Solutions</span>
         </a>
         <p>Professional Waterproofing, Heatproofing &amp; Construction Solutions.</p>
